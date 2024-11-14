@@ -55,9 +55,9 @@ export module authenticationController {
   
       res.cookie('refreshToken', refreshToken, {
         expires: new Date(Date.now() + 14 * 24 * 60 * 60 * 1000), // 14 days expiration
-        secure: true, 
+        // secure: true, 
         httpOnly: true, 
-        sameSite: 'strict',
+        // sameSite: 'strict',
         path:'/'
       });
   
@@ -192,9 +192,9 @@ export module authenticationController {
 
       res.cookie('refreshToken', refreshToken, {
         expires: new Date(Date.now() + 14 * 24 * 60 * 60 * 1000), // 14 days expiration
-        secure: true, 
+        // secure: true, 
         httpOnly: true, 
-        sameSite: 'strict',
+        // sameSite: 'strict',
         path:'/'
       });
   
