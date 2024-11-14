@@ -58,7 +58,6 @@ export module authenticationController {
         secure: true, 
         sameSite: 'none',
         path:'/',
-        domain: '.localhost',  
       });
   
       return res.status(200).json({
@@ -192,11 +191,11 @@ export module authenticationController {
 
       res.cookie('refreshToken', refreshToken, {
         expires: new Date(Date.now() + 14 * 24 * 60 * 60 * 1000), // 14 days expiration
-        // secure: true, 
-        httpOnly: true, 
-        // sameSite: 'strict',
-        path:'/'
+        secure: true, 
+        sameSite: 'none',
+        path:'/',
       });
+  
   
 
       return res.status(200).json({
