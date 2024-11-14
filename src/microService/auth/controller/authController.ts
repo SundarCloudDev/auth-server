@@ -191,10 +191,12 @@ export module authenticationController {
 
       res.cookie('refreshToken', refreshToken, {
         expires: new Date(Date.now() + 14 * 24 * 60 * 60 * 1000), // 14 days expiration
-        secure: true, 
+        httpOnly: true,
+        secure: false, 
         sameSite: 'none',
         path:'/',
       });
+      
   
   
 

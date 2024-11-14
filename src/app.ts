@@ -5,7 +5,7 @@ import cors from "cors";
 const app = express();
 // CORS configuration
 const corsOptions = {
-  origin: ['http://localhost:4200',"https://localhost:4200"],
+  origin: 'http://localhost:4200',
   credentials: true,  
 };
 
