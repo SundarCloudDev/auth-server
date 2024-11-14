@@ -58,7 +58,8 @@ export module authenticationController {
         // secure: true, 
         httpOnly: true, 
         sameSite: 'none',
-        path:'/'
+        path:'/',
+        domain: '.localhost',  
       });
   
       return res.status(200).json({
