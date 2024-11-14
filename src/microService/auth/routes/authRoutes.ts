@@ -13,6 +13,8 @@ authRouter.get("/", (req: Request, res: Response) => {
 
 authRouter.post("/login", authenticationController.loginController);
 authRouter.post("/register", authenticationController.registerController);
+// authRouter.post("/refreshToken", authenticationController.updateToken);
+authRouter.get("/refreshToken", authenticationController.updateToken);
 authRouter.get("/getUsers", verifyToken, authenticationController.getAllUser);
 authRouter.get(
   "/getAnalytics",

@@ -7,6 +7,7 @@ interface UserAttributes {
   email: string;
   password: string;
   role: string;
+  refreshToken:string;
 }
 
 interface UserCreationAttributes extends Optional<UserAttributes, "id"> {}
@@ -21,6 +22,7 @@ export class User
   public email!: string;
   public password!: string;
   public role!: string;
+  public refreshToken:string;
 }
 
 export default (sequelize: Sequelize) => {
@@ -54,6 +56,9 @@ export default (sequelize: Sequelize) => {
       role: {
         type: DataTypes.STRING,
         allowNull: false,
+      },
+      refreshToken: {
+        type: DataTypes.STRING,
       },
     
     },

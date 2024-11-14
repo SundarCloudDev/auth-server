@@ -1,10 +1,12 @@
 import express, { Request, Response } from 'express';
-import authApi from './src/microService/auth/index';
 import app from './src/app';
+import cookieParser from 'cookie-parser';
 
 const server = express();
 
 server.use(express.json());
+
+server.use(cookieParser());
 
 server.use('/',app)
 
